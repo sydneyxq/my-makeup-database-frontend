@@ -1,0 +1,127 @@
+.background {
+    /* background-color: #f4f2e8; */
+    background-color: #fffdf6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.product-list {
+    position: relative;
+    top: 27vh;
+    left: 10vw;
+    display: grid;
+    grid-template-columns: 19vw 19vw 19vw 19vw;
+    gap: 0.8vw;
+}
+
+.product-container {
+    background-color: #fffdf6;
+    box-shadow: -1px 1px 5px 9px #f4f2e8;
+    
+    width: 100%;
+    height: 100%
+}
+
+img {
+    width: 93%;
+    position: relative;
+    top: 1.5vh;
+    left: 0vw;
+    height: 72%;
+}
+
+.product-name {
+    position: relative;
+    top: 2%;
+    width: 90%;
+    height: 12%;
+    align-self: flex-end;
+    justify-self: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.6vb;
+    text-align: left;
+}
+
+.price {
+    position: relative;
+    top: 3.75%;
+    width: 83%;
+    height: 11%;
+    justify-self: center;
+    text-align: right;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.6vb;
+}
+
+.product-container2 {
+    background-color: #fffdf6;
+    box-shadow: -1px 1px 5px 9px #f4f2e8;
+    position: absolute;
+    top: 37vh;
+    left: 38.5vw;
+    width: 19%;
+    height: 57%
+}
+
+.product-container3 {
+    background-color: #fffdf6;
+    box-shadow: -1px 1px 5px 9px #f4f2e8;
+    position: absolute;
+    top: 37vh;
+    left: 58vw;
+    width: 19%;
+    height: 57%
+}
+
+.product-container4 {
+    background-color: #fffdf6;
+    box-shadow: -1px 1px 5px 9px #f4f2e8;
+    position: absolute;
+    top: 37vh;
+    left: 77.5vw;
+    width: 19%;
+    height: 57%
+}
+
+.product-container5 {
+    background-color: #fffdf6;
+    box-shadow: -1px 1px 5px 9px #f4f2e8;
+    position: absolute;
+    top: 95vh;
+    left: 19vw;
+    width: 19%;
+    height: 57%
+}
+
+.product-container6 {
+    background-color: #fffdf6;
+    box-shadow: -1px 1px 5px 9px #f4f2e8;
+    position: absolute;
+    top: 95vh;
+    left: 38.5vw;
+    width: 19%;
+    height: 57%
+}
+
+.product-container7 {
+    background-color: #fffdf6;
+    box-shadow: -1px 1px 5px 9px #f4f2e8;
+    position: absolute;
+    top: 95vh;
+    left: 58vw;
+    width: 19%;
+    height: 57%
+}
+
+.product-container8 {
+    background-color: #fffdf6;
+    box-shadow: -1px 1px 5px 9px #f4f2e8;
+    position: absolute;
+    top: 95vh;
+    left: 77.5vw;
+    width: 19%;
+    height: 57%
+}

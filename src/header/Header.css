@@ -1,0 +1,166 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: #ffcdbf;
+}
+
+.title {
+    position: absolute;
+    top: 2vh;
+    left: 0.25vw;
+    font-size: 4.5vb;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    background-color: #ffcdbf;
+}
+
+.heading-1,
+.heading-2 {
+    position: absolute;
+    top: 3.5vh;
+    right: 2vw;
+    width: 15vw;
+    font-size: 3.5vb;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #ffcdbf;
+}
+
+.heading-2 {
+    top: 3.5vh;
+    right: 17vw;
+}
+
+.search-box {
+    position: absolute;
+    border-radius: 25px;
+    top: 5.5vh;
+    left: 28vw;
+    width: 17vw;
+    height: 4vh;
+    font-size: 2.5vb;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 1vb;
+    border-color: #ffcdbf;
+    background-color: #fff5f2;
+}
+
+.sub-header {
+    position: fixed;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    height: 7%;
+    background-color: #fff8dc;
+}
+
+.categories {
+    height: 100%;
+    font-size: 2.5vb;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;   
+}
+
+.list {
+    position: absolute;
+    top: 22%;
+    left: 0;
+    width: 100%;
+    height: 48%;
+    background-color: #fffdf6;
+    box-shadow: 5px 9px 5px #f7f6eb;
+}
+
+.list-container-face,
+.list-container-lip,
+.list-container-eye {
+    height: 100%;
+    font-size: 2.75vb;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33.3%;
+}
+
+.list-container-lip {
+    left: 33.3%;
+}
+
+.list-container-eye {
+    left: 66.7%
+}
+
+.list-heading {
+    width: 15vw;
+    height: 7vh;
+    background-color: #fffdf6;
+    display: flex;
+    font-size: 3.5vb;
+}
+
+.list button {
+    width: 14vw;
+    height: 6vh;
+    background-color: #fffdf6;
+    display: flex;
+    justify-self: start;
+    margin-left: 15%;
+}
+
+.list-container-drugstore,
+.list-container-highend {
+    height: 100%;
+    font-size: 2.75vb;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+}
+
+.list-container-highend {
+    left: 50%;
+}
+
+.list-container-americas,
+.list-container-europe,
+.list-container-asia {
+    height: 100%;
+    font-size: 2.75vb;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33.3%;
+}
+
+.list-container-europe {
+    left: 33.3%;
+}
+
+.list-container-asia {
+    left: 66.7%;
+}
+
+.column-1 {
+    position: absolute;
+    width: 50%;
+}
+
+.column-2 {
+    position: absolute;
+    left: 40%;
+    width: 50%;
+}
+
+hr {
+    width: 75%;
+    margin-bottom: 0;
+}
+
