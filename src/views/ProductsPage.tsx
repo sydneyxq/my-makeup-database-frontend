@@ -2,6 +2,19 @@ import Header from "../header/Header"
 import './styles/ProductsPage.css';
 import { useSearchParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
+
+interface ShadeDto {
+    name: string,
+    hexcode: string,
+    imageUrl: string
+}
+
+interface RetailerDto {
+    name: string,
+    price: number,
+    shippingPrice: number
+}
 
 interface MakeupProductDto {
     name: string,
@@ -9,16 +22,24 @@ interface MakeupProductDto {
     brand: string,
     price: number,
     priceRange: string, 
-    country: string
+    country: string,
+    shades: ShadeDto[],
+    retailers: RetailerDto[],
+    mainImageUrl: string
 }
 
 const ProductsPage: React.FC = () => {
 
     const [searchParams] = useSearchParams();
     const [products, setProducts] = useState<MakeupProductDto[]>([]);
+    const navigate = useNavigate();
 
     const category = searchParams.get("category");
     const search = searchParams.get("search");
+
+    const handleClickProduct = (product: MakeupProductDto) => {
+       navigate(`/products/${product.name}`, {state: {product}})
+    }
 
     useEffect(() => {
 
@@ -38,23 +59,6 @@ const ProductsPage: React.FC = () => {
         fetchProducts();
     }, [category, search]);
 
-    // const productContainers = [];
-    // const numOfProducts = products.length;
-    
-    // for (let i = 0; i < numOfProducts; i++) {
-    //     productContainers.push(
-    //         <div className="product-container">
-    //             <img src="public\judydoll-highlighter-contour.webp"/>
-    //                 <div className="text-container">
-    //                     {products[1]?.brand} - {products[1]?.name}
-    //                     <div className="price">
-    //                         CAD ${products[1]?.price}
-    //                     </div>
-    //                 </div>   
-    //         </div>
-    //     )
-    // }
-
     return (
         <div>
             {/* <pre style={{background: "#eee", padding: "1rem", borderRadius: "5px"}}>
@@ -62,15 +66,17 @@ const ProductsPage: React.FC = () => {
             </pre> */}
             <div className="product-list">
                 {products.map((product) => (
-                    <div key={`${product.name}-${product.country}`} className="product-container">
-                        <img src="public\judydoll-highlighter-contour.webp"/>
-                        <div className="product-name">
-                            {product.brand} - {product.name}
-                        </div>   
-                        <div className="price">
-                            CAD ${product.price}
-                        </div>
-                </div>
+                    <div key={`${product.name}-${product.country}`}>
+                        <div className="product-container" key={product.name} onClick={() => handleClickProduct(product)}>
+                            <img src={product.mainImageUrl} className="images"/>
+                            <div className="product-name">
+                                {product.brand} - {product.name}
+                            </div> 
+                            <div className="price">
+                                CAD ${product.price}
+                            </div>
+                        </div>  
+                    </div>
                 ))}
             </div>
             <Header></Header>

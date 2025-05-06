@@ -1,7 +1,8 @@
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import MainPage from './views/MainPage'
-import DisplayProducts from './views/ProductsPage'
+import ProductsPage from './views/ProductsPage'
+import ProductDetailsPage from './views/ProductDetailsPage'
 
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<MainPage/>}/>
-        <Route path="/products" element={<DisplayProducts/>}/>
+        <Route path="/products" element={<ProductsPage/>}/>
+        <Route path="/products/:name" element={<ProductDetailsPage/>}/>
       </Routes>
     </div>
   )

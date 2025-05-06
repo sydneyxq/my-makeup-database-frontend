@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Header: React.FC = () =>  {
+    const [query, setQuery] = useState("");
     const [productList, setProductList]  = useState(false);
     const [priceList, setPriceList] = useState(false);
     const [countryList, setCountryList] = useState(false);
@@ -13,8 +14,14 @@ const Header: React.FC = () =>  {
         navigate("/");
     }
 
+    const handleSearch = (category: string, search: string, event: { key: string; }) => {
+        if (event.key === 'Enter') {
+            navigate(`/products?category=${category}&search=${search}`)
+        }
+    }
+
     const handleClickCategory = (category: string, search: string) => {
-        navigate(`/products?category=${category}&search=${encodeURIComponent(search)}`);
+        navigate(`/products?category=${category}&search=${search}`);
     }
 
     const handleToggleProductList = () => {
@@ -36,7 +43,12 @@ const Header: React.FC = () =>  {
             My Makeup Database 💕
         </button>
         <div >
-            <input className="search-box" placeholder="Search"></input>
+            <input 
+                className="search-box" 
+                placeholder="Search"
+                onChange={(event) => setQuery(event.target.value)}
+                onKeyDown={(event) => handleSearch("search", query, event)}
+            />
         </div>
         <button className="heading-1">
             My Collection
@@ -70,7 +82,7 @@ const Header: React.FC = () =>  {
                 <div className="column-1">
                     <button onClick={() => handleClickCategory("type", "foundation")}>❀ Foundation</button>
                     <button onClick={() => handleClickCategory("type", "concealer")}>❀ Concealer</button>
-                    <button onClick={() => handleClickCategory("type", "power")}>❀ Powder</button>
+                    <button onClick={() => handleClickCategory("type", "powder")}>❀ Powder</button>
                     <button onClick={() => handleClickCategory("type", "blush")}>❀ Blush</button>
                     <button onClick={() => handleClickCategory("type", "highlighter")}>❀ Highlighter</button>
                 </div>
@@ -82,9 +94,9 @@ const Header: React.FC = () =>  {
             <div className="list-container-lip">  
                 <button className="list-heading">Lip</button>
                 <hr></hr>
-                <button onClick={() => handleClickCategory("type", "lip tint")}>❀ Lip Tint</button>
+                <button onClick={() => handleClickCategory("type", "liptint")}>❀ Lip Tint</button>
                 <button onClick={() => handleClickCategory("type", "lipstick")}>❀ Lipstick</button>
-                <button onClick={() => handleClickCategory("type", "lip liner")}>❀ Lip Liner</button>
+                <button onClick={() => handleClickCategory("type", "lipliner")}>❀ Lip Liner</button>
             </div>
             <div className="list-container-eye">
                 <button className="list-heading">Eye</button>
