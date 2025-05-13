@@ -1,6 +1,6 @@
-# React + TypeScript + Vite
+# My Makeup Database
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend code of the web application, My Makeup Database, that allows users to explore a vast range of makeup products by categories such as brand, price range, and country.
 
 Currently, two official plugins are available:
 
